@@ -6,7 +6,7 @@ from datetime import datetime
 server = 'localhost'
 database = 'mydb'
 username = 'root'
-password = 'my_password'  # Remova a senha daqui!
+password = 'my_password'
 
 # Diretório de backup
 backup_dir = 'D:/backup'
@@ -27,7 +27,13 @@ except subprocess.CalledProcessError as e:
 except Exception as e:
     print(f"Ocorreu um erro: {e}")
 
-
-
+# O comando abaixo é específico para desligar o computador após o backup, remova se não for necessário.
+try:
+    # ... (seu código de backup) ...
+    subprocess.run(["shutdown", "/s", "/t", "1"], shell=True, check=True)  # Desliga o computador após o backup
+except subprocess.CalledProcessError as e:
+    print(f"Erro ao desligar o computador: {e}")
+except Exception as e:
+    print(f"Ocorreu um erro: {e}")
 
 
