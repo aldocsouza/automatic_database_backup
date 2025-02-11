@@ -9,7 +9,6 @@ O PyInstaller é uma ferramenta que permite "empacotar" scripts Python em execut
         pip install pyinstaller
     ```
 2. Crie o executável:
-
 Abra o terminal (cmd ou PowerShell) na pasta onde você salvou o script Python (backup_mysql.py) e execute o seguinte comando:
 
     ```bash
