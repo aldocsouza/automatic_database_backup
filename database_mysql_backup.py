@@ -53,4 +53,6 @@ def desligar_computador():
     except Exception as e:
         print(f"Ocorreu um erro: {e}")
 
-
+executar_backup()
+executar_git()
+desligar_computador() # Remova se não for necessário
